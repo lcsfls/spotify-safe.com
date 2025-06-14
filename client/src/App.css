@@ -1,61 +1,113 @@
-.app-container {
-  padding: 2rem;
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color: #191414;
+/* Spotify Safe - Elegant Dark Theme */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(135deg, #1DB954 0%, #191414 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #FFFFFF;
-  min-height: 100vh;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: rgba(25, 20, 20, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  padding: 2rem;
 }
 
 .title {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 2.8rem;
+  font-weight: 900;
   color: #1DB954;
-  margin-bottom: 1rem;
+  text-align: center;
+  margin-bottom: 0.25rem;
 }
 
 .subtitle {
   color: #B3B3B3;
-  margin-bottom: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 400;
 }
 
 .spotify-button {
+  display: block;
+  margin: 1.5rem auto;
   background-color: #1DB954;
   color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.2rem;
   border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.spotify-button:hover {
+  background-color: #17a74a;
 }
 
 .input {
-  padding: 0.5rem;
-  border: 1px solid #333;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 50px;
+  margin-bottom: 1rem;
   background-color: #121212;
-  color: #fff;
-  margin-right: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
 
 .action-button {
-  background-color: #535353;
+  background-color: #282828;
   color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  margin-right: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  margin-right: 0.75rem;
   border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+.action-button:hover {
+  background-color: #1DB954;
+  color: #121212;
 }
 
 .action-button.export {
   background-color: #1DB954;
+  color: white;
+}
+.action-button.export:hover {
+  background-color: #17a74a;
+  color: white;
 }
 
 .playlist-list {
-  margin-top: 1rem;
+  margin-top: 2rem;
+  max-height: 400px;
+  overflow-y: auto;
+  border-radius: 10px;
+  background-color: #121212;
+  padding: 1rem;
+  box-shadow: inset 0 0 5px #1DB954;
 }
 
 .playlist-item {
-  padding: 0.5rem 0;
+  padding: 0.75rem 1rem;
   border-bottom: 1px solid #333;
-  color: #fff;
+  color: white;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  cursor: default;
+}
+.playlist-item:hover {
+  background-color: #1DB954;
+  color: #121212;
+  font-weight: 700;
 }
 
 .cookie-banner {
@@ -65,16 +117,25 @@
   right: 0;
   background: #282828;
   color: white;
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 0.9rem;
+  box-shadow: 0 -3px 5px rgba(0,0,0,0.7);
+  z-index: 1000;
 }
 
 .accept-button {
   background-color: #1DB954;
   color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
   border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.accept-button:hover {
+  background-color: #17a74a;
 }

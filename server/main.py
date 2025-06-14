@@ -15,10 +15,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-CLIENT_ID = "your_spotify_client_id"
-CLIENT_SECRET = "your_spotify_client_secret"
-REDIRECT_URI = "http://localhost:8000/callback"
-FRONTEND_URI = "http://localhost:3000"
+CLIENT_ID="4c774b703ca04dd581468be07d39a724"
+CLIENT_SECRET="bb2955836f7f40a9a8a71a88cd7a54a5"
+REDIRECT_URI=https://spotify-safe.com/api/callback
+FRONTEND_URI=https://spotify-safe.com
 
 @app.get("/login")
 def login():

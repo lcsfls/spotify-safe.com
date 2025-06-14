@@ -9,7 +9,7 @@ function App() {
   const [cookieAccepted, setCookieAccepted] = useState(() => localStorage.getItem("cookieAccepted") === "true");
 
   const loginWithSpotify = () => {
-    window.location.href = "http://localhost:8000/login";
+    window.location.href = "https://spotify-safe.com/api/login";
   };
 
   const fetchPlaylists = async () => {

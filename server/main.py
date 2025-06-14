@@ -1,21 +1,25 @@
-from fastapi import FastAPI, Request, HTTPException
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import RedirectResponse, JSONResponse
+from fastapi.responses import RedirectResponse
 import requests
 import os
 import urllib.parse
+from dotenv import load_dotenv
+
+load_dotenv()  # load variables from .env
 
 app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  # change to your frontend URL in production for security
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-CLIENT_ID = os.getenv("4c774b703ca04dd581468be07d39a724")
-CLIENT_SECRET = os.getenv("bb2955836f7f40a9a8a71a88cd7a54a5")
+
+CLIENT_ID = os.getenv("CLIENT_ID")
+CLIENT_SECRET = os.getenv("CLIENT_SECRET")
 REDIRECT_URI = os.getenv("https://spotify-safe.com/api/callback")
 FRONTEND_URI = os.getenv("https://spotify-safe.com")
 
